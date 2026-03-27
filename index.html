@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<<link rel="stylesheet" href="style.css">>
+<head>
   <meta charset="UTF-8">
-  <title>For Maansa ✨</title>
+  <title>For Rii ✨</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
@@ -12,76 +12,98 @@
 </head>
 <body>
 
-<!-- Background Music -->
+<!-- Music -->
 <audio id="bgMusic" loop>
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
 </audio>
 
-<!-- PAGE 1 : WELCOME -->
-<section id="welcome" class="active">
-  <h1>Maansa Gowda ✨</h1>
-  <p>This little surprise is made just for you 💛</p>
-  <button class="btn" onclick="goToPage('memories')">Begin</button>
+<!-- PAGE 1 : LUXURY WELCOME -->
+<section id="page1" class="active luxury-bg">
+  <h1>Welcome, Rii ✨</h1>
+  <p>A little world created just for you 💛</p>
+  <button class="btn" onclick="goTo('page2')">Enter</button>
 </section>
 
-<!-- PAGE 2 : 50 PHOTOS -->
-<section id="memories">
-  <h2>Beautiful Moments 💫</h2>
+<!-- PAGE 2 : 50 PHOTOS + ONE WORD CAPTION -->
+<section id="page2">
+  <h2>Here… see your beautiful smiles of you 💖</h2>
 
-  <div class="grid-50">
-    <!-- Replace these with real photos -->
-    <img src="https://picsum.photos/300?1">
-    <img src="https://picsum.photos/300?2">
-    <img src="https://picsum.photos/300?3">
-    <img src="https://picsum.photos/300?4">
-    <img src="https://picsum.photos/300?5">
-    <img src="https://picsum.photos/300?6">
-    <img src="https://picsum.photos/300?7">
-    <img src="https://picsum.photos/300?8">
-    <img src="https://picsum.photos/300?9">
-    <img src="https://picsum.photos/300?10">
-    <!-- copy until 50 images -->
+  <div class="grid-photos">
+    <!-- SAMPLE (copy till 50) -->
+    <div class="photo-box">
+      <img src="https://picsum.photos/300?1">
+      <span>Pure</span>
+    </div>
+    <div class="photo-box">
+      <img src="https://picsum.photos/300?2">
+      <span>Glow</span>
+    </div>
+    <div class="photo-box">
+      <img src="https://picsum.photos/300?3">
+      <span>Magic</span>
+    </div>
+    <div class="photo-box">
+      <img src="https://picsum.photos/300?4">
+      <span>Joy</span>
+    </div>
+    <div class="photo-box">
+      <img src="https://picsum.photos/300?5">
+      <span>Smile</span>
+    </div>
+    <!-- repeat structure -->
   </div>
 
-  <p class="cute-line">
-    Every photo carries a smile, every smile reminds me of you ✨
-  </p>
-
-  <button class="btn" onclick="goToPage('wish')">Final Wish</button>
+  <button class="btn" onclick="goTo('page3')">Celebrate 🎉</button>
 </section>
 
-<!-- PAGE 3 : BIRTHDAY WISH -->
-<section id="wish">
-  <div class="grid-5">
+<!-- PAGE 3 : CAKE + CRACKERS -->
+<section id="page3" class="party-bg">
+  <div class="crackers"></div>
+
+  <h2>Make a Wish 🎂✨</h2>
+
+  <img class="cake" src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif">
+
+  <p>Blow the candle and smile 💫</p>
+
+  <button class="btn" onclick="goTo('page4')">Final Surprise 💖</button>
+</section>
+
+<!-- PAGE 4 : FINAL LUXURY WISH -->
+<section id="page4" class="final-bg">
+  <div class="final-photos">
     <img src="https://picsum.photos/400?11">
     <img src="https://picsum.photos/400?12">
     <img src="https://picsum.photos/400?13">
-    <img src="https://picsum.photos/400?14">
-    <img src="https://picsum.photos/400?15">
   </div>
 
   <p class="wish-text">
-    <strong>Happy Birthday, Maansa 🎂💖</strong><br><br>
+    Happy Birthday to my amazing long-distance bestie, <strong>Rii</strong>! 🎂✨💖<br><br>
 
-    Today is special because it celebrates you —<br>
-    someone who brings warmth, kindness, and beauty into every moment.<br><br>
+    Even though there are so many miles between us today, 🌎📍  
+    I am sending you the biggest, warmest hug through this message! 🤗💌<br><br>
 
-    Even though distance stands between us,<br>
-    it has never reduced the care and respect I feel for you.<br><br>
+    I am so proud of the person you’re becoming. 🌟💪  
+    This year is yours — go crush every goal! 🚀🎯<br><br>
 
-    May this year bring you peace,<br>
-    success, confidence, and endless smiles.<br><br>
+    Never doubt yourself or dim your light. 🕯️  
+    You have the heart of a lion and the drive for greatness. 🦁💎<br><br>
 
-    Always remember how important and cherished you are.<br>
-    This day — and this surprise — is only for you 💫
+    May your hard work turn into the success you truly deserve. 📈💰  
+    I’m always cheering for you from afar 🥂🎊<br><br>
+
+    I hope your day is filled with laughter, cake, and pure joy 🍰🎈  
+    Can’t wait till we celebrate together one day 👯‍♀️✈️<br><br>
+
+    <strong>Happy Birthday, Rii! 👑🔥</strong>
   </p>
 </section>
 
 <script>
-function goToPage(pageId) {
+function goTo(id){
   document.getElementById("bgMusic").play();
   document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-  document.getElementById(pageId).classList.add("active");
+  document.getElementById(id).classList.add("active");
 }
 </script>
 
