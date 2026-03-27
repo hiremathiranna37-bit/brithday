@@ -1,135 +1,147 @@
-/* GENERAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: black;
-  color: white;
+body{
+  font-family:'Poppins',sans-serif;
+  background:black;
+  color:white;
 }
 
-/* SECTIONS */
-section {
-  min-height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 40px 20px;
+section{
+  min-height:100vh;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:40px 20px;
 }
 
-section.active {
-  display: flex;
+section.active{
+  display:flex;
 }
 
 /* BUTTON */
-.btn {
-  margin-top: 30px;
-  padding: 14px 40px;
-  border-radius: 40px;
-  border: none;
-  background: linear-gradient(135deg, #d4af37, #ffd700);
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 0 30px rgba(255,215,0,0.5);
+.btn{
+  margin-top:30px;
+  padding:14px 40px;
+  border-radius:40px;
+  border:none;
+  background:linear-gradient(135deg,#d4af37,#ffd700);
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 30px rgba(255,215,0,0.6);
 }
 
 /* PAGE 1 */
-#welcome {
-  background: radial-gradient(circle, #1a1a1a, #000);
+.luxury-bg{
+  background:radial-gradient(circle at top,#2b2b2b,#000);
 }
 
-#welcome h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
-  color: gold;
-}
-
-#welcome p {
-  margin-top: 15px;
-  opacity: 0.85;
+.luxury-bg h1{
+  font-family:'Playfair Display',serif;
+  font-size:52px;
+  color:gold;
 }
 
 /* PAGE 2 */
-#memories {
-  background: #0b0b0b;
+#page2{
+  background:#0b0b0b;
 }
 
-#memories h2 {
-  font-family: 'Playfair Display', serif;
-  color: gold;
-  margin-bottom: 20px;
+.grid-photos{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+  max-width:1100px;
 }
 
-.grid-50 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-width: 1100px;
+.photo-box{
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
 }
 
-.grid-50 img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 12px;
+.photo-box img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  transition:transform .6s ease;
 }
 
-.cute-line {
-  margin-top: 20px;
-  font-style: italic;
-  opacity: 0.85;
+.photo-box span{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,0.6);
+  padding:5px;
+  font-size:14px;
+  letter-spacing:1px;
+  animation:fadeUp 2s infinite alternate;
+}
+
+.photo-box:hover img{
+  transform:scale(1.1);
+}
+
+@keyframes fadeUp{
+  from{opacity:.5}
+  to{opacity:1}
 }
 
 /* PAGE 3 */
-#wish {
-  background: linear-gradient(135deg, #050505, #1c1c1c);
+.party-bg{
+  background:url('https://images.unsplash.com/photo-1529634891835-5c7bcb9e38a4') center/cover;
 }
 
-.grid-5 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  margin-bottom: 30px;
-  max-width: 1000px;
+.cake{
+  width:220px;
+  margin:20px 0;
 }
 
-.grid-5 img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+/* PAGE 4 */
+.final-bg{
+  background:linear-gradient(135deg,#050505,#1a1a1a);
 }
 
-.wish-text {
-  max-width: 900px;
-  background: rgba(255,255,255,0.05);
-  padding: 35px;
-  border-radius: 20px;
-  border: 1px solid rgba(212,175,55,0.3);
-  line-height: 1.9;
+.final-photos{
+  display:flex;
+  gap:15px;
+  margin-bottom:25px;
 }
 
-.wish-text strong {
-  font-family: 'Playfair Display', serif;
-  color: gold;
-  font-size: 22px;
+.final-photos img{
+  width:150px;
+  height:200px;
+  border-radius:15px;
+  object-fit:cover;
+}
+
+.wish-text{
+  max-width:900px;
+  background:rgba(255,255,255,0.06);
+  padding:30px;
+  border-radius:20px;
+  line-height:1.9;
+  border:1px solid rgba(212,175,55,0.3);
+}
+
+.wish-text strong{
+  color:gold;
+  font-family:'Playfair Display',serif;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .grid-50 {
-    grid-template-columns: repeat(3, 1fr);
+@media(max-width:768px){
+  .grid-photos{
+    grid-template-columns:repeat(3,1fr);
   }
-
-  .grid-5 {
-    grid-template-columns: repeat(2, 1fr);
+  .final-photos{
+    flex-direction:column;
   }
 }
