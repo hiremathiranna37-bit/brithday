@@ -1,108 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <<link rel="stylesheet" href="style.css">>
-  <meta charset="UTF-8">
-  <title>For Rii ✨</title>
+<meta charset="UTF-8">
+<title>Special For Rii ✨</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Music -->
-<audio id="bgMusic" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-</audio>
-
 <!-- PAGE 1 : LUXURY WELCOME -->
-<section id="page1" class="active luxury-bg">
-  <h1>Welcome, Rii ✨</h1>
-  <p>A little world created just for you 💛</p>
-  <button class="btn" onclick="goTo('page2')">Enter</button>
+<section id="page1" class="active">
+  <h1>Welcome ✨</h1>
+  <p>A luxury surprise made with heart 💙</p>
+
+  <button class="btn" onclick="goPage('page2')">Tap for Surprise 🎁</button>
+  <button class="btn btn-bottom" onclick="goPage('page2')">One More Tap 💫</button>
 </section>
 
-<!-- PAGE 2 : 50 PHOTOS + ONE WORD CAPTION -->
+<!-- PAGE 2 : SMILES + ANIMATION -->
 <section id="page2">
-  <h2>Here… see your beautiful smiles of you 💖</h2>
+  <h2>Here see your some beautiful smiles of you 💛</h2>
+
+  <div class="emoji-strip">
+    😊✨💖🎂🌸💙🥰✨🎈
+  </div>
+
+  <div class="photo-full">
+    <img src="https://picsum.photos/900/600?1">
+    <img src="https://picsum.photos/900/600?2">
+    <img src="https://picsum.photos/900/600?3">
+  </div>
+
+  <button class="btn" onclick="goPage('page3')">Next ✨</button>
+</section>
+
+<!-- PAGE 3 : TEDDY RAIN -->
+<section id="page3">
+  <h1 class="gold">HAPPY BIRTHDAY MADAM JI 🎂💖</h1>
+
+  <div class="teddy-rain">🧸🧸🧸🧸🧸🧸🧸🧸🧸</div>
+
+  <button class="btn" onclick="goPage('page4')">Final Surprise 💎</button>
+</section>
+
+<!-- PAGE 4 : FINAL WISH -->
+<section id="page4">
+  <h2 class="gold">For You, Rii 💙</h2>
 
   <div class="grid-photos">
-    <!-- SAMPLE (copy till 50) -->
-    <div class="photo-box">
-      <img src="https://picsum.photos/300?1">
-      <span>Pure</span>
-    </div>
-    <div class="photo-box">
-      <img src="https://picsum.photos/300?2">
-      <span>Glow</span>
-    </div>
-    <div class="photo-box">
-      <img src="https://picsum.photos/300?3">
-      <span>Magic</span>
-    </div>
-    <div class="photo-box">
-      <img src="https://picsum.photos/300?4">
-      <span>Joy</span>
-    </div>
-    <div class="photo-box">
-      <img src="https://picsum.photos/300?5">
-      <span>Smile</span>
-    </div>
-    <!-- repeat structure -->
+    <img src="https://picsum.photos/300?10">
+    <img src="https://picsum.photos/300?11">
+    <img src="https://picsum.photos/300?12">
   </div>
 
-  <button class="btn" onclick="goTo('page3')">Celebrate 🎉</button>
-</section>
-
-<!-- PAGE 3 : CAKE + CRACKERS -->
-<section id="page3" class="party-bg">
-  <div class="crackers"></div>
-
-  <h2>Make a Wish 🎂✨</h2>
-
-  <img class="cake" src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif">
-
-  <p>Blow the candle and smile 💫</p>
-
-  <button class="btn" onclick="goTo('page4')">Final Surprise 💖</button>
-</section>
-
-<!-- PAGE 4 : FINAL LUXURY WISH -->
-<section id="page4" class="final-bg">
-  <div class="final-photos">
-    <img src="https://picsum.photos/400?11">
-    <img src="https://picsum.photos/400?12">
-    <img src="https://picsum.photos/400?13">
-  </div>
-
-  <p class="wish-text">
-    Happy Birthday to my amazing long-distance bestie, <strong>Rii</strong>! 🎂✨💖<br><br>
-
-    Even though there are so many miles between us today, 🌎📍  
-    I am sending you the biggest, warmest hug through this message! 🤗💌<br><br>
-
-    I am so proud of the person you’re becoming. 🌟💪  
-    This year is yours — go crush every goal! 🚀🎯<br><br>
-
-    Never doubt yourself or dim your light. 🕯️  
-    You have the heart of a lion and the drive for greatness. 🦁💎<br><br>
-
-    May your hard work turn into the success you truly deserve. 📈💰  
-    I’m always cheering for you from afar 🥂🎊<br><br>
-
-    I hope your day is filled with laughter, cake, and pure joy 🍰🎈  
-    Can’t wait till we celebrate together one day 👯‍♀️✈️<br><br>
-
-    <strong>Happy Birthday, Rii! 👑🔥</strong>
+  <p class="wish">
+Happy Birthday to my amazing long-distance friend, Rii! 🎂✨💖 Even though there are so many miles between us today, 🌎📍 I am sending you the biggest, warmest hug through this message! 🤗💌 I want you to know how incredibly proud I am of the person you’re becoming. 🌟💪 This year is yours for the taking, and I know you’re going to crush every goal! 🚀🎯 Don’t ever let a single doubt slow down your hustle or dim your bright light. 🕯️🚫 You have the heart of a lion and the drive to achieve pure greatness. 🦁💎 May your hard work turn into the massive success you truly deserve. 📈💰 I’m constantly cheering for you from afar and celebrating every win with you! 🥂🎊 Keep pushing forward, keep dreaming big, and keep being uniquely you. 🌈✨ I hope your day is filled with endless laughter, cake, and pure joy. 🍰🎈🎁 I can't wait for the day we finally get to celebrate together in person! 👯‍♀️✈️ Happy Birthday, Rii! Go out there and make this your best year yet! 🥳🔥👑
   </p>
 </section>
 
 <script>
-function goTo(id){
-  document.getElementById("bgMusic").play();
-  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+function goPage(id){
+  document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
   document.getElementById(id).classList.add("active");
 }
 </script>
