@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Maansa ✨</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
+<!-- PAGE 1 : WELCOME -->
+<section id="welcome" class="active">
+  <h1>Maansa Gowda ✨</h1>
+  <p>This little surprise is made just for you 💛</p>
+  <button class="btn" onclick="goToPage('memories')">Begin</button>
+</section>
+
+<!-- PAGE 2 : 50 PHOTOS -->
+<section id="memories">
+  <h2>Beautiful Moments 💫</h2>
+
+  <div class="grid-50">
+    <!-- Replace these with real photos -->
+    <img src="https://picsum.photos/300?1">
+    <img src="https://picsum.photos/300?2">
+    <img src="https://picsum.photos/300?3">
+    <img src="https://picsum.photos/300?4">
+    <img src="https://picsum.photos/300?5">
+    <img src="https://picsum.photos/300?6">
+    <img src="https://picsum.photos/300?7">
+    <img src="https://picsum.photos/300?8">
+    <img src="https://picsum.photos/300?9">
+    <img src="https://picsum.photos/300?10">
+    <!-- copy until 50 images -->
+  </div>
+
+  <p class="cute-line">
+    Every photo carries a smile, every smile reminds me of you ✨
+  </p>
+
+  <button class="btn" onclick="goToPage('wish')">Final Wish</button>
+</section>
+
+<!-- PAGE 3 : BIRTHDAY WISH -->
+<section id="wish">
+  <div class="grid-5">
+    <img src="https://picsum.photos/400?11">
+    <img src="https://picsum.photos/400?12">
+    <img src="https://picsum.photos/400?13">
+    <img src="https://picsum.photos/400?14">
+    <img src="https://picsum.photos/400?15">
+  </div>
+
+  <p class="wish-text">
+    <strong>Happy Birthday, Maansa 🎂💖</strong><br><br>
+
+    Today is special because it celebrates you —<br>
+    someone who brings warmth, kindness, and beauty into every moment.<br><br>
+
+    Even though distance stands between us,<br>
+    it has never reduced the care and respect I feel for you.<br><br>
+
+    May this year bring you peace,<br>
+    success, confidence, and endless smiles.<br><br>
+
+    Always remember how important and cherished you are.<br>
+    This day — and this surprise — is only for you 💫
+  </p>
+</section>
+
+<script>
+function goToPage(pageId) {
+  document.getElementById("bgMusic").play();
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+}
+</script>
+
+</body>
+</html>
