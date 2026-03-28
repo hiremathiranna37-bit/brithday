@@ -36,7 +36,7 @@ section.active {
   display: flex;
 }
 
-/* Soft floating luxury light */
+/* Soft floating light effect */
 section::before {
   content: "";
   position: absolute;
@@ -92,9 +92,11 @@ p {
   padding: 14px 46px;
   border-radius: 50px;
   border: 1px solid rgba(212,175,55,0.6);
-  background: linear-gradient(135deg, rgba(15,82,186,0.9), rgba(212,175,55,0.95));
+  background:
+    linear-gradient(135deg, rgba(15,82,186,0.9), rgba(212,175,55,0.95));
   color: #050505;
   font-weight: 500;
+  letter-spacing: 0.5px;
   cursor: pointer;
   box-shadow:
     0 12px 35px rgba(0,0,0,0.6),
@@ -109,33 +111,26 @@ p {
     0 0 30px rgba(255,215,0,0.75);
 }
 
+/* ===============================
+   PAGE 1 – LUXURY WELCOME
+   =============================== */
+#page1 {
+  background:
+    linear-gradient(180deg, rgba(11,29,58,0.95), rgba(0,0,0,0.98));
+}
+
+/* Bottom button */
 .btn-bottom {
   position: absolute;
   bottom: 36px;
 }
 
 /* ===============================
-   PAGE 1 – WELCOME (IMAGE BG)
-   =============================== */
-#page1 {
-  background:
-    linear-gradient(rgba(11,29,58,0.85), rgba(0,0,0,0.95)),
-    url("photos/1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* ===============================
-   PAGE 2 – SMILES (IMAGE BG)
+   PAGE 2 – SMILES
    =============================== */
 #page2 {
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(11,29,58,0.85)),
-    url("photos/2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    linear-gradient(180deg, #000, #0b1d3a);
 }
 
 .emoji-strip {
@@ -161,15 +156,11 @@ p {
 }
 
 /* ===============================
-   PAGE 3 – TEDDY RAIN (IMAGE BG)
+   PAGE 3 – TEDDY RAIN
    =============================== */
 #page3 {
   background:
-    linear-gradient(rgba(11,29,58,0.75), rgba(0,0,0,0.9)),
-    url("photos/3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    linear-gradient(180deg, #0b1d3a, #000);
 }
 
 .teddy-rain {
@@ -184,15 +175,11 @@ p {
 }
 
 /* ===============================
-   PAGE 4 – FINAL WISH (IMAGE BG)
+   PAGE 4 – FINAL WISH
    =============================== */
 #page4 {
   background:
-    linear-gradient(rgba(0,0,0,0.85), rgba(11,29,58,0.9)),
-    url("photos/4.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    linear-gradient(180deg, #000, #0b1d3a, #000);
 }
 
 .grid-photos {
@@ -217,7 +204,10 @@ p {
 }
 
 .wish {
-  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.02));
   backdrop-filter: blur(14px);
   padding: 38px;
   border-radius: 26px;
@@ -231,6 +221,7 @@ p {
    MOBILE OPTIMIZATION
    =============================== */
 @media (max-width: 768px) {
+
   .grid-photos {
     grid-template-columns: 1fr;
   }
